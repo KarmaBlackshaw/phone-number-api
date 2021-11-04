@@ -3,8 +3,8 @@
 require('dotenv').config()
 
 try {
-  require('./http')()
   require('./store').start()
+  require('./http')()
 } catch (error) {
   console.error(error)
 }
