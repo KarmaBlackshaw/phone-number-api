@@ -1,10 +1,10 @@
 // libs
-const express = require('express')
+import express from 'express';
 
 const store = require('../store')
 
 // helper functions
-const isValidContact = num => {
+const isValidContact = (num: any) => {
   // Check if input is a number
   if (isNaN(num)) {
     console.log('invalid number')
@@ -34,13 +34,13 @@ const isValidContact = num => {
   return convert
 }
 
-module.exports = () => {
+export default () => {
   try {
     const app = express()
 
     app.use(express.json())
 
-    app.get('/phone-numbers', async (req, res) => {
+    app.get('/phone-numbers', async (req: express.Request, res: express.Response) => {
       try {
         const list = await store.knex('phone-numbers')
 
@@ -51,7 +51,7 @@ module.exports = () => {
       }
     })
 
-    app.post('/phone-number', async (req, res) => {
+    app.post('/phone-number', async (req: express.Request, res: express.Response) => {
       try {
         const phoneNumber = isValidContact(req.body.phone)
 
@@ -72,7 +72,7 @@ module.exports = () => {
       }
     })
 
-    app.put('/phone-number/:id(\\d+)', async (req, res) => {
+    app.put('/phone-number/:id(\\d+)', async (req: express.Request, res: express.Response) => {
       try {
         const phoneNumber = isValidContact(req.body.phone)
 
@@ -106,7 +106,7 @@ module.exports = () => {
       }
     })
 
-    app.delete('/phone-number/:id(\\d+)', async (req, res) => {
+    app.delete('/phone-number/:id(\\d+)', async (req: express.Request, res: express.Response) => {
       try {
         const findNumber = await store.knex('phone-numbers')
           .where({ id: req.params.id })

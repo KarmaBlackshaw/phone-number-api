@@ -1,10 +1,10 @@
 const knex = require('knex')
-const knexfile = require('../knexfile')
+import knexfile from '../knexfile'
 
-module.exports = {
+export default {
   knex: null,
 
-  start () {
+  start() {
     try {
       this.knex = knex(knexfile)
       console.log('Connected to the database')

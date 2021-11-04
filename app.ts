@@ -2,9 +2,12 @@
 
 require('dotenv').config()
 
+import store from './store'
+import http from './http'
+
 try {
-  require('./store').start()
-  require('./http')()
+  store.start()
+  http()
 } catch (error) {
   console.error(error)
 }
