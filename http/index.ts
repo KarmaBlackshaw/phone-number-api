@@ -21,12 +21,11 @@ const isValidContact = (num: any) => {
   }
 
   // check length
-  const convert = String(number)
+  const convert = number
     .replace(/^\D/, '') // remove plus sign if there is
     .replace(/^63/, '0') // replace country code that starts with 63 => 0
 
   if (convert.length !== 11) {
-    console.log(convert)
     console.log('invalid length')
     return false
   }
