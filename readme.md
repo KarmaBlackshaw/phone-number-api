@@ -18,7 +18,7 @@ Change the current directory into the project's directory:
 cd phone-number-api
 ```
 
-Install project independencies:
+Install project dependencies:
 
 ```bash
 npm install
