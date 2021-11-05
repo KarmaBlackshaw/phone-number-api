@@ -1,6 +1,5 @@
 // Bootstrap services here
-
-require('dotenv').config()
+import 'dotenv/config'
 
 import store from './store'
 import http from './http'

@@ -1,4 +1,4 @@
-require('dotenv').config()
+import 'dotenv/config'
 
 const client = process.env.DB_CLIENT || 'mysql'
 const host = process.env.DB_HOST || '127.0.0.1'
