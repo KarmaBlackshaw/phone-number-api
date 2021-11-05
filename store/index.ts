@@ -1,5 +1,5 @@
 const knex = require('knex')
-import knexfile from '../knexfile'
+const knexfile = require('../knexfile')
 
 export default {
   knex: null,

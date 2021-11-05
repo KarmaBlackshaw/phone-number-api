@@ -6,7 +6,7 @@ const user = process.env.DB_USER || 'root'
 const password = process.env.DB_PASS || ''
 const database = process.env.DB_NAME || ''
 
-export default {
+module.exports = {
   client: client || 'mysql',
 
   migrations: {
