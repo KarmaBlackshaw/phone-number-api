@@ -1,6 +1,6 @@
 # Phone Number API
 
-Phone Number API is a coding exam by Signalytics
+A simple express application that stores/updates/deletes/gets phone numbers 
 
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
